@@ -1,11 +1,5 @@
 body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("29874683_l.jpg"); 
-    background-repeat: no-repeat;
-    background-position:50% 50%;
-    background-size:cover;
+    background-color: rgb(195, 231, 249);
 }
 h1 {
     color: black;
@@ -13,4 +7,7 @@ h1 {
     border: 3px solid rgb(28, 28, 6);
     padding: 10px;
     width: 350px;
+}
+th {
+    color: rgb(115, 62, 62);
 }

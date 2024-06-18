@@ -2,7 +2,7 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("/Users/shirakami/Documents/29874683_s.jpg");
+  background-image: url("29874683_s.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

@@ -46,13 +46,45 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data.name);
-console.log(data.weather[0].description);
-console.log(data.main.temp_max);
-console.log(data.main.temp_min);
-console.log(data.main.humidity);
-console.log(data.wind.speed);
-console.log(data.wind.deg);
+const resultDiv = document.querySelector('#result');
+
+const h1 = document.createElement('h1');
+h1.textContent = '世界の天気の検索結果';
+
+const p = document.createElement('p');
+p.textContent = `検索キー: ${data.name}`;
+
+const table = document.createElement('table');
+table.setAttribute('border', '1');
+
+const trHeader = document.createElement('tr');
+const headers = ['天気', '最高気温', '最低気温', '湿度', '風速', '風向'];
+headers.forEach(headerText => {
+  const th = document.createElement('th');
+  th.textContent = headerText;
+  table.appendChild(th);
+});
+
+const trData = document.createElement('tr');
+const weatherData = [
+  data.weather[0].description,
+  data.main.temp_max,
+  data.main.temp_min,
+  data.main.humidity,
+  data.wind.speed,
+  data.wind.deg
+];
+weatherData.forEach(dataText => {
+  const td = document.createElement('td');
+  td.textContent = dataText;
+  trData.appendChild(td);
+});
+table.appendChild(trData);
+
+resultDiv.insertAdjacentElement('beforeend', h1);
+resultDiv.insertAdjacentElement('beforeend', p);
+resultDiv.insertAdjacentElement('beforeend', table);
+
 
 
 

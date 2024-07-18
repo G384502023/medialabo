@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>世界の天気の検索結果</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
     <link rel="stylesheet" href="project.css">
   </head>
@@ -25,14 +26,20 @@
         <option value="5368361">ロサンゼルス</option>
     </select>
     <button id="btn">表示</button>
-    <div id="result"></div>
-       <table border="1">
-          <th>天気</th>
-          <th>最高気温</th>
-          <th>最低気温</th>
-          <th>湿度</th>
-          <th>風速</th>
-          <th>風向</th>
-        </table>
-    </body>
+    <div id="result">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>天気</th>
+            <th>最高気温</th>
+            <th>最低気温</th>
+            <th>湿度</th>
+            <th>風速</th>
+            <th>風向</th>
+          </tr>
+        </thead>
+        <tbody id="weatherData"></tbody>
+      </table>
+    </div>
+  </body>
 </html>

@@ -44,7 +44,6 @@ function showResult(resp) {
 
 function showError(err) {
   console.log(err);
-  alert('データの取得に失敗しました');
 }
 
 
